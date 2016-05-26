@@ -1,0 +1,20 @@
+<div class='item'>
+	<h2><%= @item.name %></h2>
+	<h3>Priority: <%= @item.priority %></h3>
+	<h3>Description</h3>
+	<p><%= @item.description %></p>
+
+	<% if @item.completed == true %>
+		<p>Completed on <%= @item.completed_date %> </p>
+		<%= render 'items/uncomplete', item: @item %>
+	<% else %>
+		<%= render 'items/complete', item: @item %>
+	<% end %>
+
+	<p>Belongs to list: <%= link_to List.find(@item.list_id).name, list_path(List.find(@item.list_id)) %></p>
+
+	<%= link_to 'Delete', item_path(@item), method: :delete %>
+	<%= link_to 'Edit', edit_item_path %>
+</div>
+<br>
+<%= link_to 'Back to list', list_path(List.find(@item.list_id)) %>

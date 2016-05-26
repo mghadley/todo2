@@ -1,0 +1,12 @@
+<h1>Create new Item</h1>
+
+<%= form_for @item do |f|%>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.label :description %>
+	<%= f.text_area :description %>
+	<%= f.label :priority %>
+	<%= f.number_field :priority %>
+	<%= f.hidden_field :list_id, value: @list.id %>
+	<%= f.submit %>
+<% end %>

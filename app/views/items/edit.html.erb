@@ -1,0 +1,13 @@
+<h1>Edit this Item</h1>
+
+<%= form_for @item do |f|%>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.label :description %>
+	<%= f.text_area :description %>
+	<%= f.label :priority %>
+	<%= f.number_field :priority %>
+	<%= f.check_box :completed %>
+	<%= f.label :completed %>
+	<%= f.submit %>
+<% end %>

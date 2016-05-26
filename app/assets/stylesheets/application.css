@@ -13,3 +13,66 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+.sub-heading {
+	background-color: #1DB0FD;
+	height: 50px;
+	line-height: 50px;
+}
+
+
+.list {
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	background-color: #0E587E;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	border-radius: 8px;
+	font-size: 20px;
+}
+
+.list a, .list a:visited {
+	color: #F4BD63;
+	text-decoration: none;
+}
+
+.item {
+	border-radius: 15px;
+	width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	padding: 10px 5px 5px 10px;
+	box-shadow: 3px 3px 10px 1px #888888
+}
+
+.item a, .item a:visited {
+	color: #3bb0c9;
+}
+
+.item h3 {
+	margin-top: 0;
+}
+
+.completed {
+	display: inline-block;
+	width: 48%;
+	position: absolute;
+	margin-bottom: 80px;
+}
+
+.outstanding {
+	display: inline-block;
+	width: 48%;
+	margin-bottom: 80px;
+}

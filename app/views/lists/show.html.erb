@@ -1,0 +1,15 @@
+<h1><%= @list.name %></h1>
+
+<% items_arr = @list.items.where(completed: false).order(priority: :desc) %>
+
+<% items_arr.each do |item| %>
+	<div class='item'>
+		<h3><%= link_to item.name, item_path(item) %></h3>
+		<p><%= item.description %></p>
+		<p>Priority: <%= item.priority %></p>
+		<%= render 'items/complete', item: item %>
+	</div>
+<% end %>
+
+<%= link_to "Add an Item", new_item_path(id: @list.id) %>
+<%= link_to "Delete this list", list_path(@list), method: :delete %>

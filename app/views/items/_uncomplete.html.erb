@@ -1,0 +1,4 @@
+<%= form_for item do |f| %>
+	<%= f.hidden_field :completed, value: false %>
+	<%= f.submit value: 'Mark Not Complete' %>
+<% end %>

@@ -1,0 +1,30 @@
+<div class='sub-heading'>
+	<h1>All Items</h1>
+</div>
+
+
+<div class='outstanding'>
+	<h2>Outstanding Items</h2>
+	<% @items_outstanding.each do |item| %>
+		<div class='item'>
+			<h3><%= link_to item.name, item_path(item) %></h3>
+			<p><%= item.description %></p>
+			<p>Priority: <%= item.priority %></p>
+			<p>Belongs to list: <%= link_to item.find_list.name, list_path(item.find_list) %></p>
+		</div>
+	<% end %>
+</div>
+
+
+<div class='completed'>
+	<h2>Completed Items</h2>
+	<% @items_completed.each do |item| %>
+		<div class='item'>
+			<h3><%= link_to item.name, item_path(item) %></h3>
+			<p><%= item.description %></p>
+			<p>Priority: <%= item.priority %></p>
+			<p>Completed on: <%= item.completed_date %></p>
+			<p>Belongs to list: <%= link_to item.find_list.name, list_path(item.find_list) %></p>
+		</div>
+	<% end %>
+</div>
